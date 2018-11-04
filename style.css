@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,400i');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600');
+/* This import is mandatory for the charts */
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Condensed:400');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Equivalent to html */
+:root {
+    font-size: 16px;
+    --base-line-height: 25px;
+    --base-left-margin: 50px;
+    --base-bottom-margin: calc(var(--base-line-height) * 0.5);
+    --base-max-width: 70ch;
+    --left-column-width: 5ch;
+    --first-bg-color: #4e79a7;
+    --hover-color: #f28e2b;
+}
+
+body {
+    font-family: 'IBM Plex Serif', serif;
+    font-weight: 400;
+    font-size: 1rem;
+    max-width: var(--base-max-width);
+    line-height: var(--base-line-height);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: visible;
+    margin-left: calc(var(--left-column-width) + 10ch);
+    margin-top: var(--base-line-height)
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'IBM Plex Sans', sans;
+    font-weight: 600;
+    line-height: calc(var(--base-line-height) * 2);
+}
+
+h1 {
+    font-size: 1.602rem;
+}
+
+h2 {
+    font-size: 1.424rem;
+}
+
+h3 {
+    font-size: 1.266rem;
+}
+
+h4 {
+    font-size: 1.125rem;
+}
+
+/* Text elements */
+p {
+    /* margin-bottom: var(--base-bottom-margin); */
+}
+
+blockquote {
+    font-size: 0.889em;
+    margin-left: var(--base-left-margin);
+    margin-bottom: var(--base-bottom-margin);
+}
+
+ul {
+    list-style-position: outside;
+    margin-bottom: calc(var(--base-line-height) * .5);
+}
+
+/* HTML links*/
+a {
+    color: #4e79a7;
+}
+
+/*This one is related to the link at the end of the header. */
+.anchor-link {
+    display: none;
+}
+
+/* plot.ly charts */
+.plotly-graph-div {
+    margin-top: var(--base-bottom-margin);
+    margin-bottom: var(--base-bottom-margin);
+}
+
+/* Tables */
+table {
+    color: #000000;
+    font-family: 'IBM Plex Mono', monospace;
+    border: 0;
+    border-spacing: 0px;
+    margin-bottom: calc(var(--base-bottom-margin) * 2);
+    width: max-content;
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    max-width: calc(var(--base-max-width) * 1.5);
+    margin-top: var(--base-bottom-margin);
+    margin-bottom: var(--base-bottom-margin);
+}
+
+th,
+tr,
+td {
+    font-size: 0.889rem;
+    font-weight: 400;
+    border-bottom: 1px solid #4e79a7;
+    margin: 0;
+    line-height: var(--base-line-height);
+    padding-left: 1ch;
+    padding-right: 1ch;
+    overflow-wrap: break-word;
+}
+
+thead th {
+    font-family: 'IBM Plex Sans';
+    font-size: 1rem;
+    background-color: #4e79a7;
+    color: #ffffff;
+}
+
+thead tr th,
+tbody tr th {
+    text-align: left;
+}
+
+tbody tr td {
+    text-align: right;
+}
+
+th.index_name,
+th.row_heading {
+    text-align: left;
+}
