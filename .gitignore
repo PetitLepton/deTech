@@ -105,3 +105,6 @@ venv.bak/
 
 # HTML
 *.html
+
+# Credentials
+.credentials/
