@@ -1,22 +1,19 @@
 {# Load the basic template provided by Jupyter #}
 {% extends 'basic.tpl' %}
 
-{# Remove the input blocks (code) #}
-{% block input_group %}
-{% endblock input_group %}
+{# Remove the warning output #}
+{% block stream_stderr %}
+{% endblock stream_stderr %}
 
-{# Remove the output prompt (equivalent to option --no-prompt)#}
-{% block output_area_prompt %}
-{% endblock output_area_prompt %}
-
+{# Include only the cells tagged by show #}
 {% block any_cell %}
-{% if 'no_report' in cell['metadata'].get('tags', []) %}
-{% else %}
+{% if 'show' in cell['metadata'].get('tags', []) %}
     {{ super() }}
+{% else %}
 {% endif %}
 {% endblock any_cell %}
 
-{%- block header -%}
+{% block header %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,12 +22,12 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
       <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-{%- endblock header -%}
-{%- block body -%}
+{% endblock header %}
+{% block body %}
     <body>
         {{ super() }}
     </body>
-{%- endblock body -%}
-{%- block footer -%}
+{% endblock body %}
+{% block footer %}
 </html>
-{%- endblock footer -%}
+{% endblock footer %}
