@@ -7,4 +7,4 @@ Beyond the data analysis, the workshop aims at giving good practices on shaping 
 
 There are two ways to use the material:
 - clone the project and install the virtual environment through [conda](https://conda.io/miniconda.html);
-- click on  [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/PetitLepton/deTech.git/master) to create the project in mybinder.org.
+- click on  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/PetitLepton/deTech.git/master) to create the project in mybinder.org.
